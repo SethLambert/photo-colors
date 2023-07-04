@@ -1,0 +1,32 @@
+.color-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+.color-container > #color-box {
+    width: 200px;
+    height: 100px;
+    border-radius: 5px
+}
+
+.color-container > #color-box > .color-label span {
+    visibility: hidden;
+}
+
+.color-container > #color-box > .color-label:hover span {
+    visibility: visible;
+}
+
+.label {
+    color: black;
+    font-size: 24px;
+    font-family: sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.form {
+    margin: 10px
+}

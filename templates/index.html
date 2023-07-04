@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Color Finder</title>
+        <link rel="stylesheet" href="static\styles.css">
+    </head>
+
+    <body>
+        <h1>Color Finder</h1>
+        <div class="form">
+            <form action="{{url_for('home')}}" method = "post">
+                <label for="image-url">Enter Image URL:</label>
+                <input type="text" id="image-url" name="image-url">
+                <input type="submit" value="Submit">
+                <input type="radio" id="random" name="search_type" value="random">
+                <label for="random">Random Select</label>
+                <input type="radio" id="top" name="search_type" value="top">
+                <label for="top">Top 16 Colors</label>
+            </form>
+        </div>
+        <div class="color-container">
+            {% for color in colors %}
+                <div id="color-box" style="background-color:RGB{{color}}"><span class="color-label"><span class="label">{{color}}</span></span></div>
+            {% endfor%}
+        </div>
+    </body>
+</html>
